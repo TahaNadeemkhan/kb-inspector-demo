@@ -9,7 +9,7 @@ description: Describes the MailGuard database (tables reports, cases and removal
 
 | Table | Columns | Notes |
 | --- | --- | --- |
-| `reports` | `id`, `account_id`, `sender`, `subject`, `body`, `received_at`, `verdict` | `verdict` is `phish`, `spam` or `legit` |
+| `reports` | `id`, `account_id`, `sender`, `subject`, `body`, `received_at`, `verdict`, `reported_by_vip` | `verdict` is `phish`, `spam` or `legit`; `reported_by_vip` is true when the reporter is on the customer's VIP list |
 | `cases` | `id`, `account_id`, `case_number`, `status`, `updated_at` | `status` is `open`, `processing` or `closed` |
 | `removal_jobs` | `id`, `case_id`, `mailbox`, `state` | `state` is `queued`, `done` or `failed` |
 
